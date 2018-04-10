@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".systemtransition.TransitionActivity"/>
+        <activity android:name=".systemtransition.AutoTransitionActivity"/>
+        <activity android:name=".systemtransition.ChangeBoundsActivity"/>
     </application>
 
 </manifest>

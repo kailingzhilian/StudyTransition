@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.kai.ling.studytransition.R;
 
-public class TransitionActivity extends AppCompatActivity implements View.OnClickListener {
+public class AutoTransitionActivity extends AppCompatActivity implements View.OnClickListener {
 
     private LinearLayout mRoot;
     private TextView mTvAutoTransition;
@@ -18,7 +18,7 @@ public class TransitionActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_transition);
+        setContentView(R.layout.activity_auto_transition);
 
         initView();
     }

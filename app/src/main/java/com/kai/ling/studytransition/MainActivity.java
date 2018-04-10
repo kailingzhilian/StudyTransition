@@ -5,7 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.kai.ling.studytransition.systemtransition.TransitionActivity;
+import com.kai.ling.studytransition.systemtransition.AutoTransitionActivity;
+import com.kai.ling.studytransition.systemtransition.ChangeBoundsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -13,14 +14,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.btn_transitionactivity).setOnClickListener(this);
+        findViewById(R.id.btn_auto_transition).setOnClickListener(this);
+        findViewById(R.id.btn_change_bounds).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.btn_transitionactivity:
-                startActivity(new Intent(this, TransitionActivity.class));
+            case R.id.btn_auto_transition:
+                startActivity(new Intent(this, AutoTransitionActivity.class));
+                break;
+            case R.id.btn_change_bounds:
+                startActivity(new Intent(this, ChangeBoundsActivity.class));
                 break;
         }
     }
