@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.kai.ling.studytransition.systemtransition.AutoTransitionActivity;
 import com.kai.ling.studytransition.systemtransition.ChangeBoundsActivity;
+import com.kai.ling.studytransition.systemtransition.ChangeClipBoundsActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         findViewById(R.id.btn_auto_transition).setOnClickListener(this);
         findViewById(R.id.btn_change_bounds).setOnClickListener(this);
+        findViewById(R.id.btn_change_clip_bounds).setOnClickListener(this);
     }
 
     @Override
@@ -26,6 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_change_bounds:
                 startActivity(new Intent(this, ChangeBoundsActivity.class));
+                break;
+            case R.id.btn_change_clip_bounds:
+                startActivity(new Intent(this, ChangeClipBoundsActivity.class));
                 break;
         }
     }
